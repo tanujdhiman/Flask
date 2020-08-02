@@ -23,7 +23,7 @@ def predict():
         out = 'Well done, you are placed and your salary is ', prediction[0][1]
     elif prediction[0][0] == 0:
         out = 'Oops, you are not placed and your salary is ', prediction[0][1]
-    return render_template('index.html', prediction_text=out)
+    return render_template('index.html', prediction_text='{}'.format(out))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
