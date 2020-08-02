@@ -3,14 +3,13 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>Predict Salary Analysis</title>
+  <title>Campus Recruitment</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
- <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/chat-board-712a6.appspot.com/o/tanujcssfile.css?alt=media&token=3ece7342-e18c-4a11-9c4f-0bea8ef216c4">
+ <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/chat-board-712a6.appspot.com/o/tanujcssfile.css?alt=media&token=6e628660-396d-4803-ab04-d6ba6598d145">
 </head>
 
 <body>
@@ -20,7 +19,7 @@
   <div class="container">
     <div class="row text-center">
       <div class="col-md-12">
-        <h1>Predict Salary Analysis</h1>
+        <h1>Campus Recruitment</h1>
       </div>
     </div>
   </div>
@@ -33,27 +32,32 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="10th precentage" class="form-control" placeholder="10th precentage" required="required" />
+          <label>Enter your 10th Percentage (%)</label>
+          <input type="text" name="10th precentage" class="form-control tss" placeholder="10th precentage" required="required" />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="12th precentage" class="form-control" placeholder="12th precentage" required="required" />
+          <label>Enter your 12th Percentage (%)</label>
+          <input type="text" name="12th precentage" class="form-control tss" placeholder="12th precentage" required="required" />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="Degree precentage" class="form-control" placeholder="Degree precentage" required="required" />
+          <label>Enter your Degree Percentage (%)</label>
+          <input type="text" name="Degree precentage" class="form-control tss" placeholder="Degree precentage" required="required" />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="Etest precentage" class="form-control" placeholder="etest precentage" required="required" />
+          <label>Enter your Etest Percentage (%)</label>
+          <input type="text" name="Etest precentage" class="form-control tss" placeholder="etest precentage" required="required" />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <input type="text" name="MBA precentage" class="form-control" placeholder="mba precentage" required="required" />
+          <label>Enter your MBA Percentage (%)</label>
+          <input type="text" name="MBA precentage" class="form-control tss" placeholder="mba precentage" required="required" />
         </div>
       </div>
     </div>
@@ -63,7 +67,14 @@
 
    <br>
    <br>
-   {{ prediction_text }}
+   <div class="container">
+     <div class="row text-center">
+       <div class="col-md-12">
+          <label class="res">{{ prediction_text }}</label>
+       </div>
+     </div>
+   </div>
+
 
  </div>
 
