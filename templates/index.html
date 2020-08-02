@@ -3,29 +3,63 @@
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Predict Salary Analysis</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="{{ url_for('static', filename='static/style.css') }}">
-  
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/chat-board-712a6.appspot.com/o/tanujcssfile.css?alt=media&token=3ece7342-e18c-4a11-9c4f-0bea8ef216c4">
 </head>
 
 <body>
+  <br>
+  <br>
  <div class="login">
-	<h1>Predict Salary Analysis</h1>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h1>Predict Salary Analysis</h1>
+      </div>
+    </div>
+  </div>
 
+<br>
+<br>
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="10th precentage" placeholder="10th precentage" required="required" />
-        <input type="text" name="12th precentage" placeholder="12th precentage" required="required" />
-		<input type="text" name="Degree precentage" placeholder="Degree precentage" required="required" />
-    <input type="text" name="Etest precentage" placeholder="etest precentage" required="required" />
-    <input type="text" name="MBA precentage" placeholder="mba precentage" required="required" />
-
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
+<form action="{{ url_for('predict')}}"method="post">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="10th precentage" class="form-control" placeholder="10th precentage" required="required" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="12th precentage" class="form-control" placeholder="12th precentage" required="required" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="Degree precentage" class="form-control" placeholder="Degree precentage" required="required" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="Etest precentage" class="form-control" placeholder="etest precentage" required="required" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <input type="text" name="MBA precentage" class="form-control" placeholder="mba precentage" required="required" />
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary float-right">Predict</button>
+  </div>
+</form>
 
    <br>
    <br>
@@ -33,6 +67,9 @@
 
  </div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
 </html>
