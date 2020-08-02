@@ -20,9 +20,9 @@ def predict():
 
     #output = round(prediction[0], 2)
     if prediction[0][0] == 1:
-        out = 'Well done you are placed and your salary is ', prediction[0][1]
+        out = 'Well done, you are placed and your salary is ', prediction[0][1]
     elif prediction[0][0] == 0:
-        out = 'Well done you are not placed and your salary is ', prediction[0][1]
+        out = 'Oops, you are not placed and your salary is ', prediction[0][1]
     return render_template('index.html', prediction_text=out)
 
 @app.route('/predict_api',methods=['POST'])
